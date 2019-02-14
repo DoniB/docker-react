@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run doni/docker-react npm run test -- --coverage
+
+# deploy:
+#   provider: elastickbeanstalk
+#   region: "us-west-2"
+#   app: "docker-react-aws"
+#   env: "Docker-env"
+#   bucket_name: "elastickbeanstalk-us-west-2-32335451223567"
+#   bucket_path: "docker-react-aws"
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: "$AWS_SECRET_KEY"
